@@ -31,7 +31,9 @@ I am a passionate Python Developer with over 2 years of professional experience,
 - **Model Customization:** Fine-tuned the **YOLO** architecture on custom datasets for high-density vehicle detection in complex traffic scenarios.
 - **Data Pipeline:** Managed end-to-end data labeling and augmentation in **Roboflow** for robustness against diverse lighting conditions.
 - **Industrial Application:** Adapted detection logic for industrial automation, specifically for material tracking in a manufacturing environment.
-
+<p align="center">
+  <img src="traffic-detection.png" width="700" alt="Traffic Detection Output">
+</p>
 ### 3. Advanced Anti-Bot Web Scraping & Data Engineering
 **Tech Stack:** `Python`, `Selenium`, `Pandas`, `Openpyxl`, `Chrome DevTools Protocol`
 - **Anti-Detection Mechanism:** Implemented session mirroring and profile cloning to bypass sophisticated anti-bot measures on international academic portals.
