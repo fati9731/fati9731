@@ -44,6 +44,13 @@ I am a passionate Python Developer with over 2 years of professional experience,
 - **Resilient Navigation:** Developed robust pagination and `GET-fallback` logic to ensure continuous extraction across 5+ countries (UK, Canada, Finland, etc.).
 - **Data Normalization:** Built a specialized engine to clean and standardize multi-currency grant information into a structured database.
 
+### 4. LLM-based Legal Assistant (Prompt Engineering & AI Logic)
+**Tech Stack:** `Python`, `OpenAI API`, `Prompt Engineering`, `LLM Conversation Design`
+- **Prompt Engineering:** Designed system and user prompts to control tone, structure, and constraints of LLM responses.
+- **Multi-step Conversation Flow:** Implemented guided, step-by-step legal interviews with intelligent follow-up questions.
+- **Structured Output Parsing:** Transformed free-form LLM responses into concise, lawyer-ready legal case summaries.
+- **AI Logic Focus:** Worked on LLM behavior design and conversation logic, collaborating with backend developers for integration.
+
 > **Note:** Due to Non-Disclosure Agreements (NDAs), these projects are maintained in private repositories. Detailed architecture discussions are welcome during interviews.
 
 ---
