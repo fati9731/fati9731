@@ -25,6 +25,9 @@ I am a passionate Python Developer with over 2 years of professional experience,
 - **Financial Engineering:** Implemented the **Black-Scholes Model** to calculate Greeks (**Delta, Gamma, Theta, Vega, Rho**) for professional valuation.
 - **Predictive Analytics:** Integrated **Meta's Prophet** model to forecast underlying asset prices and determine "Predicted Moneyness" at expiration.
 - **Advanced Data Manipulation:** Performs complex merging and vectorized operations to structure a professional trading dashboard.
+<p align="center">
+  <img src="chart.png" width="700" alt="chart Output">
+</p>
 
 ### 2. Real-time Traffic Monitoring & Object Detection
 **Tech Stack:** `Python`, `YOLO (Ultralytics)`, `Computer Vision`, `OpenCV`, `Roboflow`
@@ -34,6 +37,7 @@ I am a passionate Python Developer with over 2 years of professional experience,
 <p align="center">
   <img src="traffic-detection.png" width="700" alt="Traffic Detection Output">
 </p>
+
 ### 3. Advanced Anti-Bot Web Scraping & Data Engineering
 **Tech Stack:** `Python`, `Selenium`, `Pandas`, `Openpyxl`, `Chrome DevTools Protocol`
 - **Anti-Detection Mechanism:** Implemented session mirroring and profile cloning to bypass sophisticated anti-bot measures on international academic portals.
