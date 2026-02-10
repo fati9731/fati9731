@@ -44,8 +44,8 @@ I am a passionate Python Developer with over 2 years of professional experience,
 
 ## 📊 GitHub Stats
 <p align="left">
-<img src="https://github-readme-stats.vercel.app/api?username=fati9731&show_icons=true&theme=radical" alt="Fatemeh's GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fati9731&layout=compact&theme=radical" alt="Top Langs" />
+  <img src="https://github-readme-stats.vercel.app/api?username=fati9731&show_icons=true&theme=radical" alt="Fatemeh's GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=fati9731&layout=compact&theme=radical&hide=jupyter%20notebook" alt="Top Langs" />
 </p>
 
 ## 📬 Contact Me
