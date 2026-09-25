@@ -51,7 +51,15 @@ I am a passionate Python Developer with over 2 years of professional experience,
 - **Structured Output Parsing:** Transformed free-form LLM responses into concise, lawyer-ready legal case summaries.
 - **AI Logic Focus:** Worked on LLM behavior design and conversation logic, collaborating with backend developers for integration.
 
-> **Note:** Due to Non-Disclosure Agreements (NDAs), these projects are maintained in private repositories. Detailed architecture discussions are welcome during interviews.
+> **Note:** Due to Non-Disclosure Agreements (NDAs), the four projects above are maintained in private repositories. Detailed architecture discussions are welcome during interviews.
+
+### 5. PromptShield — Prompt Injection Detection Engine
+**Tech Stack:** `Python`, `Regex`, `pytest`, `Adversarial Evaluation` — **[Source Code →](https://github.com/fati9731/promptshield)**
+- **Layered Rule Engine:** Detects instruction override, system and developer prompt extraction, role manipulation, and jailbreak attempts, with severity-weighted scoring.
+- **Sentence-Level Analysis:** Each clause is judged independently, so an attack cannot hide behind an innocent-looking sentence beside it, and cross-sentence rules catch attacks split across two clauses.
+- **Normalization Before Matching:** Paraphrases and synonyms are rewritten into a canonical form before the rules run, closing gaps that no amount of additional pattern-writing could reach.
+- **False-Positive Control:** Every rule carries a guard that separates *performing* an attack from *discussing* one, so security documentation is never flagged. Each rule is pinned in tests from both sides — an attack it must catch, and a description of that same attack it must ignore.
+- **Adversarial Evaluation Methodology:** Tuning and scoring use separate labelled datasets. Any dataset the rules are tuned against is retired and replaced by a freshly written holdout, so reported performance is *measured on unseen data* rather than fitted to it.
 
 ---
 
