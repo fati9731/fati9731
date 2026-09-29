@@ -1,7 +1,7 @@
 # Hi there, I'm Fatemeh Naeemi 👋
 ### Python Developer | Aspiring Machine Learning Engineer
 
-I am a passionate Python Developer with over 2 years of professional experience, specializing in **Web Scraping**, **Data Engineering**, and **Computer Vision**. Currently, I am deeply focused on mastering **Machine Learning** and building intelligent systems that solve real-world problems.
+I am a passionate Python Developer with over 3 years of professional experience, specializing in **Web Scraping**, **Data Engineering**, and **Computer Vision**. Currently, I am deeply focused on mastering **Machine Learning** and building intelligent systems that solve real-world problems.
 
 - 🔭 I’m currently working on: Fine-tuning **YOLO** models and exploring **Time-series forecasting (LSTM)**.
 - 🌱 I’m currently learning: Advanced Deep Learning and Deployment of ML models.
@@ -53,13 +53,16 @@ I am a passionate Python Developer with over 2 years of professional experience,
 
 > **Note:** Due to Non-Disclosure Agreements (NDAs), the four projects above are maintained in private repositories. Detailed architecture discussions are welcome during interviews.
 
-### 5. PromptShield — Prompt Injection Detection Engine
-**Tech Stack:** `Python`, `Regex`, `pytest`, `Adversarial Evaluation` — **[Source Code →](https://github.com/fati9731/promptshield)**
-- **Layered Rule Engine:** Detects instruction override, system and developer prompt extraction, role manipulation, and jailbreak attempts, with severity-weighted scoring.
-- **Sentence-Level Analysis:** Each clause is judged independently, so an attack cannot hide behind an innocent-looking sentence beside it, and cross-sentence rules catch attacks split across two clauses.
+### 5. PromptShield — Prompt Injection Detection & Adversarial Evaluation
+**Tech Stack:** `Python`, `Regex`, `scikit-learn`, `TF-IDF`, `Logistic Regression`, `pytest` — **[Source Code →](https://github.com/fati9731/promptshield)**
+- **Layered Rule Engine:** Detects instruction override, system and developer prompt extraction, role manipulation, and jailbreak attempts, with severity-weighted scoring. Each clause is judged independently, so an attack cannot hide behind an innocent sentence beside it, and cross-sentence rules catch attacks split across two clauses.
+- **False-Positive Control:** Every rule carries a guard separating *performing* an attack from *discussing* one, so security documentation is never flagged — the property that lets the patterns stay broad. Each rule is pinned in tests from both sides: an attack it must catch, and a description of that same attack it must ignore.
 - **Normalization Before Matching:** Paraphrases and synonyms are rewritten into a canonical form before the rules run, closing gaps that no amount of additional pattern-writing could reach.
-- **False-Positive Control:** Every rule carries a guard that separates *performing* an attack from *discussing* one, so security documentation is never flagged. Each rule is pinned in tests from both sides — an attack it must catch, and a description of that same attack it must ignore.
-- **Adversarial Evaluation Methodology:** Tuning and scoring use separate labelled datasets. Any dataset the rules are tuned against is retired and replaced by a freshly written holdout, so reported performance is *measured on unseen data* rather than fitted to it.
+- **Labelled Corpus & Data Auditing:** Built a labelled prompt corpus from multiple independently written sources, with automated checks for duplicates and for the same prompt carrying contradictory labels across files — the errors that silently invalidate every metric built on top of them.
+- **Machine-Learning Baseline:** Trained a TF-IDF + logistic regression classifier against the rule engine to test where pattern matching structurally cannot generalize, then combined the two and measured what each contributes and what the combination costs.
+- **Detected and Corrected a Data Leak:** Found that merging the labelled sources had placed most of the evaluation set into the training half, making the first model score meaningless. Rebuilt the evaluation as leave-one-source-out, and swept the decision threshold entirely on out-of-fold predictions so the fix could not quietly reintroduce the leak.
+- **Single-Use Final Holdout:** Wrote a fresh labelled holdout *after* development stopped and scored it once. The harness verifies its own premise — it hashes the holdout and refuses to run if any prompt overlaps the development data — rather than asserting that the data is unseen.
+- **Reported the Result That Hurt:** The final holdout showed materially worse generalization than cross-validation had suggested, because held-out *files* written by one author are not a held-out *distribution*. Published the lower number with that explanation instead of the flattering one, and made the resulting false-positive rate the project's next priority.
 
 ---
 
